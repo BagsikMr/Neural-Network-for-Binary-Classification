@@ -12,7 +12,7 @@ This repository contains a basic implementation of a neural network using Tensor
 1. Clone the repository:
 
 ```shell
-git clone <repository_url>
+git clone github.com/BagsikMr/Neural-Network-for-Binary-Classification.git
 ```
 
 2. Navigate to the project directory:
@@ -30,7 +30,7 @@ pip install tensorflow
 
 4. Run the code
 ```shell
-python neural_network.py
+python main.py
 ```
 
 ## Code Explanation
