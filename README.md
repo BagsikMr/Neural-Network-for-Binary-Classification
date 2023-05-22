@@ -24,8 +24,7 @@ cd neural-network-binary-classification
 3. Install the required dependecies
 
 ```shell
-pip install numpy
-pip install tensorflow
+pip install -r requirements.txt
 ```
 
 4. Run the code
