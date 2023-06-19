@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-
+import matplotlib.pyplot as plt
 
 # Przygotowanie danych treningowych
 def generate_data(num_samples, radius):
@@ -39,3 +39,24 @@ rounded_predictions = np.round(predictions).flatten()
 
 accuracy = np.sum(rounded_predictions == test_labels) / len(test_labels)
 print("Dokładność modelu: {:.2f}%".format(accuracy * 100))
+
+# Obliczanie powierzchni decyzyjnej
+x_min, x_max = -radius - 1, radius + 1
+y_min, y_max = -radius - 1, radius + 1
+step = 0.1
+
+xx, yy = np.meshgrid(np.arange(x_min, x_max, step),
+                     np.arange(y_min, y_max, step))
+grid_points = np.c_[xx.ravel(), yy.ravel()]
+grid_predictions = model.predict(grid_points)
+grid_labels = np.round(grid_predictions).flatten()
+
+plt.figure()
+plt.title("Powierzchnia decyzyjna")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.scatter(grid_points[:, 0], grid_points[:, 1], c=grid_labels, cmap='coolwarm', alpha=0.6)
+plt.scatter(points[:, 0], points[:, 1], c=labels, cmap='coolwarm', edgecolors='black')
+plt.xlim(x_min, x_max)
+plt.ylim(y_min, y_max)
+plt.show()
