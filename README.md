@@ -6,6 +6,7 @@ This repository contains a basic implementation of a neural network using Tensor
 - Python (>=3.6)
 - NumPy
 - TensorFlow (>=2.0)
+- Matplotlib
 
 ## Usage
 
