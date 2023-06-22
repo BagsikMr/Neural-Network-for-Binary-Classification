@@ -38,7 +38,10 @@ python main.py
 - The neural network model is defined using the `Sequential` class from TensorFlow's Keras API. It consists of three fully connected (dense) layers with ReLU activation functions, and the last layer uses a sigmoid activation function for binary classification.
 - The model is trained using the Adam optimizer and binary cross-entropy loss function.
 - After training, the model is tested on a separate set of data points to evaluate its accuracy.
+- The decision boundary is calculated and visualized using a meshgrid of points.
 
 ## Customization
 - You can modify the `num_samples` and `radius` variables in the code to control the number of training samples and the radius for generating the data.
 - The structure and parameters of the neural network model can be adjusted as per your requirements.
+
+**Note**: Please ensure that you have the required dependencies installed before running the code.
